@@ -212,13 +212,13 @@ function isDobvalid(dob)
 	if(dob == "")
 	{
 		isValid = false;
-		document.getElementById("dobValidationError").classList.remove("hide");
+		document.getElementById("dobvalidationError").classList.remove("hide");
 	}
 	else{
 		isValid = true;
-		if(!document.getElementById("dobValidationError").classList.contains("hide"))
+		if(!document.getElementById("dobvalidationError").classList.contains("hide"))
 		{
-			document.getElementById("dobValidationError").classList.add("hide");
+			document.getElementById("dobvalidationError").classList.add("hide");
 		}
 	}
 	return isValid;
@@ -231,13 +231,13 @@ function isGendervalid(gender)
 	if(gender == "")
 	{
 		isValid = false;
-		document.getElementById("genderValidationError").classList.remove("hide");
+		document.getElementById("gendervalidationError").classList.remove("hide");
 	}
 	else{
 		isValid = true;
-		if(!document.getElementById("genderValidationError").classList.contains("hide"))
+		if(!document.getElementById("gendervalidationError").classList.contains("hide"))
 		{
-			document.getElementById("genderValidationError").classList.add("hide");
+			document.getElementById("gendervalidationError").classList.add("hide");
 		}
 	}
 	return isValid;
