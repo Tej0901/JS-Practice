@@ -35,16 +35,6 @@
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     }
     
-    .leftSide{
-    float:left; 
-    margin:auto;
-    }
-
-    .rightSide{
-    float:right;
-    margin:auto;
-    }
-    
     input[type=text],input[type=number] ,input[type=email], input[type=tel], select,textarea{
         width: 100%;
         padding: 12px 20px;
