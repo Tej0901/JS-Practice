@@ -25,7 +25,7 @@
     }
     
     form{
-        background-color: skyblue;
+        background-color: #d3d5fa;
         font-family:Arial, sans-serif;
         padding: 20px;
         display:auto;
@@ -66,11 +66,8 @@
         color: #0000ee;
         margin-right: 4px;
     }
+
+    .error{
+		color: red; font-size: 90%;
+	} 
     
-    label.validation-error{
-        color:   red;
-        margin-left: 5px;
-    }
-    .hide{
-        display:none;
-    }
