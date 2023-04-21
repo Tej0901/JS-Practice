@@ -1,1 +1,6 @@
 
+// to run the Student Admit Form CRUD using APIs , first install the JSON server, using " npm install -g json-server "
+
+// and then run the db.json file in terminal using " json-server db.json " 
+
+// next you can open the index.html from your local storage in google chrome(Preferred) and you are done with the setUp......
