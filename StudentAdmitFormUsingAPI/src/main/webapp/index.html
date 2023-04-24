@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- Client Course JS Exercise_2 Validation,UI Render, and CRUD -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/Users/teja-pt7068/Downloads/stdPortal.jpeg" /> 
+    <link rel="stylesheet" href="styles.css">
+    <title>Student Admission Form</title>
+</head>
+
+<body style="background-color: #c5e4f2">
+	<CENTER><h2>Student Management System with UI rendering & CRUD</h2></CENTER>
+    <script src="main.js"></script>
+    <script src="crudOperation.js"></script>
+	<script src="formValidation.js"></script>
+    <table>
+        <tr>
+            <td>
+                <!--Form-->
+                <form method="post" onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="on">
+                	<h3><center>Student Admission Form</center></h3>
+                    <div>
+                        <label>First Name *</label>
+                        <input type="text" name="firstName" id="firstName" placeholder="Enter the First Name"  maxlength="45">
+                        <div class="error" id="noFirstName"></div>
+                    </div>
+            
+                    <div>
+                        <label>Last Name *</label>
+                        <input type="text" name="lastName" id="lastName" placeholder="Enter the Last Name" maxlength="20">
+                        <div class="error" id="noLastName"></div>
+                    </div>
+                    <div>
+                        <label>Email *</label>
+                        <input type="email" name="email" id="email" placeholder="Enter the Email ID">
+                        <div class="error" id="noEmail"></div>
+                    </div>
+                    
+                    <div>
+                        <label>Phone No *</label>
+                        <input type="text" name="PhoneNo" id="phoneNo" placeholder="Enter the Student Phone No" >
+                        <div class="error" id="noPhoneNo"></div>
+                    </div><br>
+
+                    <div>
+                        <label>Date Of Birth *</label>
+                        <input type="date" name="dob" id="dob" placeholder="Enter the Student Date Of Birth" >
+                        <div class="error" id="noDob"></div>
+                    </div><br>
+
+                    <div>
+                        <label>Gender *</label>
+                        <select name="gender" id="gender">
+                        	<option value=""> --Please Select Your Gender-- 
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="error" id="noGender"></div>
+                    </div>
+
+                    <div>
+                    <label for="address">Present Address *</label>
+                    <textarea id="address" name="address" placeholder="Enter the Present Address" title="As Per Adhaar"></textarea>
+                    <div class="error" id="noAddress"></div>
+                    </div>
+                    
+                    <div>
+                    <label for="state">State *</label>
+                    <select name="state" id="state">
+                        <option value=""> --Please select Your Present State-- </option>
+                        <option value="ap">Andhra Pradesh</option>
+                        <option value="tn">Tamil Nadu</option>
+                        <option value="ka">Karnataka</option>
+                        <option value="kl">Kerela</option>
+                        <option value="ts">Telangana</option>
+                    </select>
+                    <div class="error" id="noState"></div>
+                    </div>
+					<div>
+                    <label for="program">Program *</label>
+                    <select name="program" id="program">
+                        <option value="">--Please select a preferred Program--</option>
+                        <option value="b.tech">B.Tech</option>
+                        <option value="msc">MSc</option>
+                        <option value="phd">PhD</option>
+                        <option value="mca">MCA</option>
+                        <option value="degree">Degree</option>
+                    </select>
+                    <div class="error" id="noProgram"></div>
+                    </div>
+                    <div>
+                    <label for="dept">Department *</label>
+                    <select name="dept" id="dept">
+                        <option value="">--Please select a preferred Department--</option>
+                        <option value="ece">ECE</option>
+                        <option value="cse">CSE</option>
+                        <option value="civil">CIVIL</option>
+                        <option value="mech">MECH</option>
+                        <option value="eee">EEE</option>
+                        <option value="chem">CHEM</option>
+                        <option value="it">IT</option>
+                        <option value="eie">EIE</option>
+                        <option value="math">Mathematics</option>
+                        <option value="science">Science</option>
+                    </select>
+                    <div class="error" id="noDept"></div>
+                    </div>
+                    <div>
+                        <label>Entrance Test No. *</label>
+                        <input type="number" name="etNo" id="etNo" placeholder="Enter the Enrollment No." step="1">
+                        <div class="error" id="noEtNo"></div>
+                    </div>
+                    <div>
+                        <label>Total Marks Obtained *</label>
+                        <input type="number" name="totalMarks" id="totalMarks" placeholder="Enter the Total Marks Obtained" step="1">
+                        <div class="error" id="noTotalMarks"></div>
+                    </div>
+                    
+                    <div>
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+           </tr>
+           <tr>
+            <td>
+                <table class="list" id="stdlist" style="background-color: rgb(5, 85, 88); color: white;">
+                    <thead><center>Student Records Received...</center>  
+                        <tr>
+                            <th>Appl.ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th> Email</th>
+                            <th>Phone No</th>
+                            <th>DOB</th>
+                            <th>Gender</th>
+                            <th>Address</th>
+                            <th>State</th>
+                            <th>Program</th>
+                            <th>Department</th>
+                            <th>Enrollment No</th>
+                            <th>Marks</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table><br><br>
+    <center><p style="color: black;"> TEJA(PT-7068) @2023 </p></center>
+</body>
+</html>

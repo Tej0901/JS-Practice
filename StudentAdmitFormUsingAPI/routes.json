@@ -1,0 +1,7 @@
+{
+    "/api/studentRecords/list/":"/studentRecords/",
+    "/api/studentRecords/get/:id": "/studentRecords/:id",
+    "/api/studentRecords/create": "/studentRecords",
+    "/api/studentRecords/update/:id": "/studentRecords/:id",
+    "/api/studentRecords/delete/:id": "/studentRecords/:id"
+ }
